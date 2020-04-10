@@ -1,0 +1,10 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="employeeService" class="com.thenerdyaditya.service.EmployeeService">
+<!--        Spring Setter Injection-->
+        <property name="empDAO" ref="employeeDAO" />
+<!--        Spring Constructor Injection-->
+<!--        <constructor-arg ref="employeeDAO"/>-->
+    </bean>
+    <bean id="employeeDAO" class="com.thenerdyaditya.dao.EmployeeDAOUsingJDBC" />
+</beans>
